@@ -1,10 +1,13 @@
-cases = int(input("How many cases do you want? ")
+cases = int(input("How many cases do you want? "))
 
 for i in range(cases):
     nks = []
-    for i range(3):
+    for i in range(3):
         nks.append(int(input("N, K, S: ")))
-    ktime = nks[1]-nks[0]
+    n = nks[0] 
+    k = nks[1]
+    s = nks[2]
+    ktime = k
     ans1 = n+1
     ans2 = (k-s)+(n-s)
     
