@@ -1,17 +1,14 @@
-cases = int(input("How many cases do you want? "))
+cases = int(input())
 
 for i in range(cases):
-    nks = []
-    for i in range(3):
-        nks.append(int(input("N, K, S: ")))
-    n = nks[0] 
-    k = nks[1]
-    s = nks[2]
-    ktime = k
+    n, k, s = map(int, input().split())
+    print(n, k, s)
+    
+    ktime = k-1
     ans1 = n+1
-    ans2 = (k-s)+(n-s)
+    ans2 = (k-s)+(n-s+1)
     
     if ans1 <= ans2:
-        print(f"Case #{cases}: {ans1+ktime} ")
+        print(f"Case #{cases+1}: {ans1+ktime} ")
     else:
-        print(f"Case #{cases}: {ans2+ktime}")
+        print(f"Case #{cases+1}: {ans2+ktime}")
